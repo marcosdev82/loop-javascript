@@ -1,4 +1,4 @@
-# 🧪 Exercício: Utilizando o `forEach` em JavaScript
+# 🧪 Exercício 1: Utilizando o `forEach` em JavaScript
 
 ## 🎯 Objetivo
 
@@ -40,4 +40,49 @@ const nomes = [];
 produtos.forEach(produto => {
   nomes.push(produto.nome);
 });
+
 console.log("\n📝 Nomes dos produtos:", nomes);
+´´´
+
+# 🔁 Exercício 2: Iterando com `for...in` em JavaScript
+
+## 🎯 Objetivo
+
+Praticar a iteração de propriedades de objetos com o loop `for...in`.
+
+## 📘 Descrição
+
+Você receberá um objeto que contém informações sobre um aluno, como nome, idade, curso e notas. Seu objetivo é:
+
+1. Iterar sobre as propriedades do objeto com `for...in`.
+2. Exibir as chaves e seus respectivos valores.
+3. Identificar quais propriedades são numéricas (por exemplo, notas) e calcular a média dessas propriedades.
+
+## 🧩 Código do Exercício
+
+´´´javascript
+const aluno = {
+  nome: "João Silva",
+  idade: 20,
+  curso: "Engenharia",
+  nota1: 7.5,
+  nota2: 8.0,
+  nota3: 9.2
+};
+
+let somaNotas = 0;
+let quantidadeNotas = 0;
+
+for (let chave in aluno) {
+  console.log(`${chave}: ${aluno[chave]}`);
+
+  // Verifica se a chave começa com "nota"
+  if (chave.startsWith("nota")) {
+    somaNotas += aluno[chave];
+    quantidadeNotas++;
+  }
+}
+
+const media = somaNotas / quantidadeNotas;
+console.log(`\n📊 Média das notas: ${media.toFixed(2)}`);
+
