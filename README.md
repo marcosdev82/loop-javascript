@@ -85,4 +85,72 @@ for (let chave in aluno) {
 
 const media = somaNotas / quantidadeNotas;
 console.log(`\n📊 Média das notas: ${media.toFixed(2)}`);
+```
+
+
+# 🧠 Exercícios com `while` em JavaScript
+
+Este repositório contém exemplos e exercícios práticos utilizando o laço de repetição `while` em JavaScript. Ideal para quem está aprendendo estruturas de repetição!
+
+---
+
+## 📘 Exercício 1: Contagem de 1 a 10
+
+```js
+let i = 1;
+while (i <= 10) {
+  console.log(i);
+  i++;
+}
+```
+
+## 📘 Exercício 2: Somar números até o usuário digitar 0
+
+```js
+let soma = 0;
+let num = parseInt(prompt("Digite um número (0 para sair):"));
+
+while (num !== 0) {
+  soma += num;
+  num = parseInt(prompt("Digite outro número (0 para sair):"));
+}
+
+console.log("Soma total:", soma);
+```
+## 📘 Exercício 3: Verificar senha
+
+```js
+const senhaCorreta = "1234";
+let tentativa = prompt("Digite a senha:");
+
+while (tentativa !== senhaCorreta) {
+  tentativa = prompt("Senha incorreta. Tente novamente:");
+}
+
+console.log("Acesso liberado!");
+```
+
+📘 Exercício 4: Tabuada de um número
+
+```js
+let numero = parseInt(prompt("Digite um número para ver sua tabuada:"));
+let contador = 1;
+
+while (contador <= 10) {
+  console.log(`${numero} x ${contador} = ${numero * contador}`);
+  contador++;
+}
+
+```
+
+📘 Exercício 5: Números pares de 0 a 20
+
+```js
+let n = 0;
+while (n <= 20) {
+  if (n % 2 === 0) {
+    console.log(n);
+  }
+  n++;
+}
 
