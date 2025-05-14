@@ -11,20 +11,34 @@ const produtos = [
   { nome: "Cadeira", preco: 300 },
 ];
 
+// produtos.forEach((produto) => {
+//    console.log(`nome: ${produto.nome}, preço: R$ ${produto.preco.toFixed(2)}`)
+// });
+
+// let total = 0;
+
+// produtos.forEach((produto) => {
+//     total = produto.preco + total;
+// });
+
+// console.log(`O preço total é: R$ ${total.toFixed(2)}`)
+
+// let nomeProdutos = []
+
+// produtos.forEach((produto) => {
+//     nomeProdutos.push(produto.nome)
+// })
+
+// -------------------------------------------
+
+let total = 0
+let nomeProdutos = [] 
+
 produtos.forEach((produto) => {
-   console.log(`nome: ${produto.nome}, preço: R$ ${produto.preco.toFixed(2)}`)
-});
-
-let total = 0;
-
-produtos.forEach((produto) => {
-    total = produto.preco + total;
-});
-
-console.log(`O preço total é: R$ ${total.toFixed(2)}`)
-
-let nomeProdutos = []
-
-produtos.forEach((produto) => {
+    console.log(`O ${produto.nome} custa ${produto.preco.toFixed(2)}`)
+    total += produto.preco
     nomeProdutos.push(produto.nome)
-})
+});
+
+console.log(total)
+console.log(nomeProdutos)

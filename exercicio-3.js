@@ -15,14 +15,27 @@ const aluno = {
   nota4: 6.8,
 };
 
-for(let key in aluno) {
-    console.log(`${key}: ${aluno[key]}`)
-}
+// for(let key in aluno) {
+//     console.log(`${key}: ${aluno[key]}`)
+// }
 
-let somaNotas = 0;
-for(let key in aluno) {
-    if (typeof aluno[key] === 'number' && key !== 'idade')
-        somaNotas += aluno[key];
-}
+// let somaNotas = 0;
+// for(let key in aluno) {
+//     if (typeof aluno[key] === 'number' && key !== 'idade')
+//         somaNotas += aluno[key];
+// }
 
-console.log(`A média das notas é: ${somaNotas / 4}`)
+// console.log(`A média das notas é: ${somaNotas / 4}`)
+
+// for (let key in aluno) {
+//   console.log(`Chave: ${key} - Valor: ${aluno[key]}`)
+// }
+
+let nota = 0
+for (let key in aluno) {
+  console.log(`Chave: ${key} - Valor: ${aluno[key]}`)
+  if (typeof aluno[key] === 'number' && key !== 'idade') {
+     nota += aluno[key]
+  }
+}
+console.log(nota / 4)
