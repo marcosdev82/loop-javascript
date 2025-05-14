@@ -1,3 +1,10 @@
+// Resumo das partes:
+// Array de objetos → [...]
+
+// Objeto → {...}
+
+// Par chave-valor → "chave": valor (ou propridade)
+
 const obj = [
   {
     "id": 1,
@@ -17,7 +24,7 @@ const obj = [
   {
     "id": 4,
     "nome": "Diego Lima",
-   "email": "diego.lima@example.com"
+    "email": "diego.lima@example.com"
   },
   {
     "id": 5,
@@ -51,22 +58,15 @@ const obj = [
   }
 ]
 
-for (key in obj) {
-    // console.log(obj[key])
-    console.log(obj[key].id)
-    console.log(obj[key].nome)
-    console.log(obj[key].email)
+// itera obtendo o indice
+for (let key in obj) {
+  // console.log(key)
+  // console.log(obj[key])
+  console.log(obj[key].nome)
 }
 
-for (value of obj) {
-    // console.log(value)
-    console.log(value.id)
-    console.log(value.nome)
-    console.log(value.email)
-}
-
-const arr = [20, 45, 30, 11, 5]
-for (key in arr) {
-    // console.log(arr[key])
-    console.log(arr[key])
+// itera obtendo o valor
+for (let value of obj) {
+  // console.log(value)
+  console.log(value.nome)
 }

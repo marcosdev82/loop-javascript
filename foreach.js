@@ -15,3 +15,4 @@ function logArrayElements(element, index, array) {
 // a[0] = 2
 // a[1] = 5
 // a[2] = 9
+
