@@ -2,8 +2,11 @@
 // Você receberá um objeto que contém informações sobre um aluno, como nome, idade, curso e notas. Seu objetivo é:
 
 // 1. Iterar sobre as propriedades do objeto com `for...in`.
-// 2. Exibir as chaves e seus respectivos valores.
-// 3. Identificar quais propriedades são numéricas (por exemplo, notas) e calcular a média dessas propriedades.
+// for (let key in aluno) {
+//   console.log(`${key}: ${aluno[key]}`)
+// }
+
+// 2. Identificar quais propriedades são numéricas (por exemplo, notas) e calcular a média dessas propriedades.
 
 const aluno = {
   nome: "João Silva",
@@ -14,28 +17,17 @@ const aluno = {
   nota3: 9.2,
   nota4: 6.8,
 };
-
-// for(let key in aluno) {
-//     console.log(`${key}: ${aluno[key]}`)
-// }
-
-// let somaNotas = 0;
-// for(let key in aluno) {
-//     if (typeof aluno[key] === 'number' && key !== 'idade')
-//         somaNotas += aluno[key];
-// }
-
-// console.log(`A média das notas é: ${somaNotas / 4}`)
-
-// for (let key in aluno) {
-//   console.log(`Chave: ${key} - Valor: ${aluno[key]}`)
-// }
-
-let nota = 0
+// 1. Iterar sobre as propriedades do objeto com `for...in`.
 for (let key in aluno) {
-  console.log(`Chave: ${key} - Valor: ${aluno[key]}`)
+  console.log(`${key}: ${aluno[key]}`)
+} 
+
+// 2. Identificar quais propriedades são numéricas (por exemplo, notas) e calcular a média dessas propriedades.
+let notas = 0
+for (let key in aluno) {
+
   if (typeof aluno[key] === 'number' && key !== 'idade') {
-     nota += aluno[key]
+    notas += aluno[key]
   }
 }
-console.log(nota / 4)
+console.log(notas / 4)
