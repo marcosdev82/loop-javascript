@@ -58,15 +58,35 @@ const obj = [
   }
 ]
 
-// itera obtendo o indice
+// Itera sobre objeto comum. Não itera sobre map / set
+
+// Exemp: 
+
+const pessoa = {
+  nome: "Lucas",
+  idade: 30,
+  email: "lucas@email.com"
+};
+
+// Você pode usar for...in para percorrer as chaves de um objeto comum.
 for (let key in obj) {
-  // console.log(key)
-  // console.log(obj[key])
-  console.log(obj[key].nome)
+  console.log(`Key:${key}`)
+  console.log(`id: ${obj[key].id}`)
+  console.log(`Key: ${obj[key].nome}`)
+  console.log(`Key: ${obj[key].email}`)
+  console.log('--------------')
 }
 
-// itera obtendo o valor
-for (let value of obj) {
-  // console.log(value)
-  console.log(value.nome)
+// itera sobre Array, String, Map e Set
+for (let [key, pessoa] of Object.entries(obj)) {
+  console.log(key)
+  console.log(pessoa.id);
+  console.log(pessoa.nome);
+  console.log(pessoa.email);
+  console.log('--------------');
 }
+
+// Resumo prático
+// Objeto comum: { nome: "Ana", idade: 25 }
+
+// Objeto especial: Arrays, Maps, Dates, Sets, Promises, Funções, Instâncias de classe.
