@@ -90,3 +90,9 @@ for (let [key, pessoa] of Object.entries(obj)) {
 // Objeto comum: { nome: "Ana", idade: 25 }
 
 // Objeto especial: Arrays, Maps, Dates, Sets, Promises, Funções, Instâncias de classe.
+
+// Maps
+const mapa = new Map();
+mapa.set("nome", "Carlos");
+mapa.set(123, "Número");
+console.log(mapa.get("nome")); // Carlos
