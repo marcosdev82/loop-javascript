@@ -22,7 +22,7 @@ for (let index in arr) {
 }
 
 // for...of
-// Itera sobre os valores de objetos iteráveis (como arrays, strings, maps, sets, etc).
+// Itera sobre os valores de objetos iteráveis (como arrays, strings, maps, sets, etc), mas não itera sobre objeto comum, precisa ser convertido.
 
 // Retorna os valores diretamente, não os índices.
 
@@ -38,4 +38,10 @@ const str = "abc";
 
 for (let char of str) {
   console.log(char); // 'a', 'b', 'c'
+}
+
+//  Se quiser usar for...of com um objeto, você precisa transformá-lo em uma estrutura iterável, por exemplo com Object.entries():
+
+for (let [chave, valor] of Object.entries(pessoa)) {
+  console.log(`${chave}: ${valor}`);
 }
