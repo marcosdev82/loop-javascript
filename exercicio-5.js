@@ -122,3 +122,18 @@ while(a < array.length) {
     a++
 }
 console.log(novoArray)
+
+//  4. Simular saque de caixa eletrônico (cédulas de 100, 50, 20, 10)
+
+let valor = 280;
+let cedulas = [100, 50, 20, 10];
+let b = 0;
+
+while (valor > 0 && b < cedulas.length) {
+    let qtd = Math.floor(valor / cedulas[b]);
+    if (qtd > 0) {
+        console.log(`${qtd} cédula(s) de R$${cedulas[b]}`);
+        valor -= qtd * cedulas[b];
+    }
+    b++;
+}
