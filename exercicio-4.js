@@ -27,17 +27,8 @@
 //   i++;
 // }
 
-//4. Ler números do usuário até digitar 0 (simulado com array)
-
-// const entradas = [5, 12, 7, 0]; // simula entrada do usuário
-// let i = 0;
-
-// while (entradas[i] !== 0) {
-//   console.log("Você digitou:", entradas[i]);
-//   i++;
-// }
-
 //5. Calcular o fatorial de um número
+// O fatorial de um número é o produto de todos os números inteiros positivos menores ou iguais a esse número.
 
 // let numero = 5;
 // let resultado = 1;
@@ -47,33 +38,58 @@
 //   numero--;
 // }
 
+//6. Ler números do usuário até digitar 0 (simulado com array)
+
+// const entradas = [5, 12, 7, 0]; // simula entrada do usuário
+// let i = 0;
+
+// while (entradas[i] !== 0) {
+//   console.log("Você digitou:", entradas[i]);
+//   i++;
+// }
+
+
 // -------------------------------
 
-//1. Contar de 1 a 10
-let i = 1;
+let i = 1
+
 while(i <= 10) {
-    console.log(i++)
+    console.log(i)
+    i++
 }
 
-// 2. Somar números até que a soma ultrapasse 100
-let soma = 0;
-let numero = 1;
+//2. Somar números até que a soma ultrapasse 100
 
-while (soma <= 100) {
-    soma += numero;
-    numero++;
+let num = 0;
+let total = 1
+
+while(num <= 100) {
+    num+=total
+    total++
 }
-console.log("Soma final:", soma);
+console.log(num)
 
 //3. Contar números pares de 0 a 20
-let num = 1; // 21  
-while(num <= 20) { //1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
-    if (num%2==0) {
-        console.log(num) //2,4,6,8,10,12,14,16,18,20
-    }
-    num++ // 21
-}
 
-//4. Ler números do usuário até digitar 0 (simulado com array)
-const entradas = [5, 12, 7, 0]; // simula entrada do usuário
-let i = 0;
+let pares = 1;
+let totalPares = 0
+while (pares <= 20) {
+    if (pares%2==0) {
+        console.log(pares)
+        totalPares+=1
+    }
+    pares++
+}
+console.log(totalPares)
+console.log('------------------')
+
+// 5. Calcular o fatorial de um número
+
+let numero = 5;
+let resultado = 1;
+
+while (numero > 1) {
+  resultado *= numero;
+  numero--;
+}
+console.log(resultado)
