@@ -14,11 +14,7 @@
 
 // console.log(`${numero} é primo?`, ehPrimo);
 
-
-
-
 //  2. Inverter uma string
-
 
 // let str = "javascript";
 // let reversed = "";
@@ -32,10 +28,7 @@
 // console.log("Invertido:", reversed);
 
 
-
-
 //  3. Remover elementos duplicados de um array manualmente
-
 
 // let array = [1, 2, 2, 3, 4, 4, 5];
 // let i = 0;
@@ -49,8 +42,6 @@
 // }
 
 // console.log("Sem duplicados:", resultado);
-
-
 
 
 //  4. Simular saque de caixa eletrônico (cédulas de 100, 50, 20, 10)
@@ -87,3 +78,47 @@
 // }
 
 // console.log(acertou ? "Acertou!" : "Errou todas as tentativas.");
+
+// ----------------------------------------------------------
+
+
+//  1. Número Primo: verificar se um número é primo usando `while`
+
+let numero = 5;
+let i = 2;
+let ehPrimo = true;
+
+while (i < numero) { 
+    if (numero % i === 0) {
+        ehPrimo = false;
+        break;
+    }
+    i++;
+}
+
+console.log(`${numero} é primo?`, ehPrimo);
+
+//  2. Inverter uma string
+
+let str = "javascript";
+let k = str.length - 1;
+let inverso = "";
+
+while(k >= 0) {
+    inverso += str[k]
+    k--
+}
+console.log(inverso)
+
+//  3. Remover elementos duplicados de um array manualmente
+
+let array = [1, 2, 2, 3, 4, 4, 5];
+let a = 0;
+let novoArray = []
+while(a < array.length) {
+    if (!novoArray.includes(array[a])) {
+        novoArray.push(array[a])
+    }
+    a++
+}
+console.log(novoArray)
