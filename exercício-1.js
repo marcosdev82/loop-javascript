@@ -62,7 +62,7 @@ const obj = [
 
 // Exemp: 
 
-const pessoa = {
+const pessoa = { // {} = objeto
   nome: "Lucas",
   idade: 30,
   email: "lucas@email.com"
@@ -91,8 +91,21 @@ for (let [key, pessoa] of Object.entries(obj)) {
 
 // Objeto especial: Arrays, Maps, Dates, Sets, Promises, Funções, Instâncias de classe.
 
-// Maps
+// Iterando sobre um Map Maps
 const mapa = new Map();
 mapa.set("nome", "Carlos");
-mapa.set(123, "Número");
+mapa.set("numero", 123);
+
 console.log(mapa.get("nome")); // Carlos
+console.log(mapa);
+
+// Forma 1: usando destructuring
+for (let [chave, valor] of mapa) {
+  console.log(`${chave}: ${valor}`);
+}
+
+// Forma 2: acessar diretamente o array
+for (let entrada of mapa) {
+  console.log(entrada[0], entrada[1]);
+}
+
