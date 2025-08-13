@@ -43,21 +43,20 @@ const produtos = [
 // -------------------------------------------
 
 produtos.forEach((produto) => {
-  console.log(`Nome: ${produto.nome}`)
-  console.log(`Preço: ${produto.preco.toFixed(2)}`)
-  console.log('------------')
+  console.log(`nome: ${produto.nome}, preço: R$ ${produto.preco.toFixed(2)}`)
+  console.log('-------------------')
 })
 
-// 2. Calcular e exibir o preço total de todos os produtos.
 let total = 0
 produtos.forEach((produto) => {
-  total += produto.preco
+  total+=produto.preco; 
 })
-console.log(total)
+console.log(`Preço total é: R$ ${total.toFixed(2)}`)
+console.log(`-------------------`)
 
-// 3. Criar um novo array apenas com os nomes dos produtos (sem usar `map`).
-let nomes = []
+let nomesProdutos = []
+
 produtos.forEach((produto) => {
-  nomes.push(produto.nome)
+  nomesProdutos.push(produto.nome)
 })
-console.log(nomes)
+console.log(nomesProdutos)
