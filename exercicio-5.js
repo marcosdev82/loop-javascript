@@ -1,4 +1,7 @@
 //  1. Número Primo: verificar se um número é primo usando `while`
+// Um número primo é um número natural maior que 1 que só pode ser dividido por 1 e por ele mesmo, ou seja, 
+// ele tem exatamente dois divisores positivos distintos. 
+// O número 2 é o único número primo par. Todos os outros pares são divisíveis por 2 e, portanto, não são primos.
 
 // let numero = 29;
 // let i = 2;
@@ -82,58 +85,44 @@
 // ----------------------------------------------------------
 
 
-//  1. Número Primo: verificar se um número é primo usando `while`
+// 1. Número Primo: verificar se um número é primo usando `while`
 
-let numero = 5;
-let i = 2;
-let ehPrimo = true;
+// let numero = 2;
+// let i = 2;
+// let ehPrimo = true;
 
-while (i < numero) { 
-    if (numero % i === 0) {
-        ehPrimo = false;
-        break;
-    }
-    i++;
-}
+// while (i < numero) { //
+//     if (numero % i === 0) {
+//     ehPrimo = false;
+//     break;
+//     }
+//     i++;
+// }
 
-console.log(`${numero} é primo?`, ehPrimo);
+// console.log(ehPrimo)
 
 //  2. Inverter uma string
 
-let str = "javascript";
-let k = str.length - 1;
-let inverso = "";
+// let str = "javascript";
+// let num = str.length - 1
+// let invertido = ""
 
-while(k >= 0) {
-    inverso += str[k]
-    k--
-}
-console.log(inverso)
+// while(num >= 0) {
+//     invertido+=str[num]
+//     num--
+// }
+// console.log(invertido)
 
 //  3. Remover elementos duplicados de um array manualmente
 
 let array = [1, 2, 2, 3, 4, 4, 5];
-let a = 0;
-let novoArray = []
-while(a < array.length) {
-    if (!novoArray.includes(array[a])) {
-        novoArray.push(array[a])
+
+let arr = []
+let i = 0;
+while (i < array.length) {
+    if(!arr.includes(array[i])) {
+        arr.push(array[i])
     }
-    a++
+    i++
 }
-console.log(novoArray)
-
-//  4. Simular saque de caixa eletrônico (cédulas de 100, 50, 20, 10)
-
-let valor = 280;
-let cedulas = [100, 50, 20, 10];
-let b = 0;
-
-while (valor > 0 && b < cedulas.length) {
-    let qtd = Math.floor(valor / cedulas[b]);
-    if (qtd > 0) {
-        console.log(`${qtd} cédula(s) de R$${cedulas[b]}`);
-        valor -= qtd * cedulas[b];
-    }
-    b++;
-}
+console.log(arr)
