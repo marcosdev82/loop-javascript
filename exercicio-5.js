@@ -84,48 +84,43 @@
 
 // ----------------------------------------------------------
 
-
 // 1. Número Primo: verificar se um número é primo usando `while`
 
-let num = 1; // numero a ser verificado
-let i = 2; // tem que ser maior que um. (o único numero par primo é o 2)
-let isPrimo = true; // se o loop e o if não for satisfeito fica true
-
-while(i < num) { // 3
-    if(num%i===0) {
-        isPrimo = false;
-        break // caso seja divisível por 2 não incrementa mais e sai do loop 
+let numero = 5
+let i = 2;
+let ePrimo = true
+while(i < 5) { // sim
+    if(i%numero===0) { // 2,3,4
+        ePrimo = false
+        break
     }
     i++
 }
-if (isPrimo) {
-console.log(`O número ${num} é primo`)
-} else {
-console.log(`O número ${num} não é primo`)
-}
 
-//  2. Inverter uma string
+console.log(ePrimo)
+
+// 2. Inverter uma string
 
 let str = "javascript";
-let newStr = "" // tpi
-let total = str.length - 1 
+let $i = str.length - 1;
+let word = ""
 
-while(0 <= total) { // 7
-    newStr+= str[total]
-    total--
+while($i >= 0)  {
+    word+=str[$i]
+    $i--
 }
-console.log(newStr)  
+console.log(word)
 
-// 3. Remover elementos duplicados de um array manualmente
+//  3. Remover elementos duplicados de um array manualmente
 
 let array = [1, 2, 2, 3, 4, 4, 5];
-let arr = [] // [1,2]
-let $n = 0;
+let p = 0;
+let arr = []
 
-while($n < array.length) { //0,1,2,3
-    if (!arr.includes(array[$n])) {
-        arr.push(array[$n])
+while(p < array.length) {
+    if (!arr.includes(array[p])) {
+        arr.push(array[p])
     }
-    $n++
+    p++
 }
 console.log(arr)
