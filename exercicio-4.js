@@ -60,7 +60,6 @@ while(i <= 10) {
 console.log('---')
 
 //2. Somar números até que a soma ultrapasse 100
-
 let soma = 0
 let num = 1
 
@@ -71,7 +70,6 @@ while(soma <= 100) {
 console.log(soma)
 
 //3. Contar números pares de 0 a 20, sendo que 0 não é par
-
 let par = 0;
 
 while(par <= 20) {
@@ -81,13 +79,16 @@ while(par <= 20) {
     par++
 }
 
+console.log('---')
+
 //4. Calcular o fatorial de um número
 // O fatorial de um número é o produto de todos os números inteiros positivos menores ou iguais a esse número.
-let fatorial = 20;
+let fatorial = 5;
 let $i = 0;
 
-while($i <= fatorial) {
+while($i <= fatorial) { //1,2,5,26
     $i*=$i
     $i++
 }
+
 console.log($i)

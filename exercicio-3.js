@@ -32,18 +32,15 @@ const aluno = {
   nota4: 6.8,
 };
 
-for(let key in aluno) {
-  console.log(`${key}:${aluno[key]}`)
+for(let k in aluno) {
+  console.log(`${k}: ${aluno[k]}`)
 }
 
-console.log(`--------------------------`)
+console.log('----------')
 
-// 2. Identificar quais propriedades são numéricas (por exemplo, notas) e calcular a média dessas propriedades.
-
-let media = 0
-for(let key in aluno) {
-  if (typeof aluno[key] === 'number' && key !== 'idade') {
-    media+=aluno[key]
-  }
+for(let [k, v] of Object.entries(aluno)) {
+  console.log(`${k}: ${v}`)
 }
-console.log(`A média é: ${media/4}`)
+
+
+// typeof não diferencia array de objeto 
